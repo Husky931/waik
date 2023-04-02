@@ -1,4 +1,3 @@
-import { wrapRange } from "@lincode/math"
 import { useEffect, useRef, useState } from "react"
 import ReactHammer from "react-hammerjs"
 
@@ -12,10 +11,10 @@ const Component = ({ onTextChange, items }: ComponentProps) => {
     const [transition, setTransition] = useState(true)
     const blockedRef = useRef(false)
 
-    const wordIndex = wrapRange(-index + 1, 0, items.length - 1)
-    useEffect(() => {
-        onTextChange?.(items[wordIndex])
-    }, [onTextChange, wordIndex])
+    // const wordIndex = wrapRange(-index + 1, 0, items.length - 1)
+    // useEffect(() => {
+    //     onTextChange?.(items[wordIndex])
+    // }, [onTextChange, wordIndex])
 
     return (
         <div className="slider-container relative">
